@@ -18,25 +18,28 @@ int main()
     char* N_str = readline();
     int N = strtol(N_str, &N_endptr, 10);
 
-    if (N_endptr == N_str || *N_endptr != '\0') { exit(EXIT_FAILURE); }
 
-    if(N%2 != 0) //Mycode ******
+     if(N%2 == 0) //Mycode ******
     {
-       printf("Weird");
-    }
-    else if(2<N<5) //Mycode ******
-    {
+      if(N>=2 && N<=5)
+      { //Mycode ******
       printf("Not Weird");
+      }
+      else if(N>=6 && N<=20) //Mycode ******
+      {
+       printf("Weird");
+      }
+      else //Mycode ******
+     { 
+       printf("Not Weird");
+     }
     }
-    else if(6<N<20) //Mycode ******
+    else 
     {
-     printf("Weird");
-    }
-    else //Mycode ******
-    {
-     printf("Not Weird");
+      printf("Weird");
     }
 
+    if (N_endptr == N_str || *N_endptr != '\0') { exit(EXIT_FAILURE); }
 
     return 0;
 }
