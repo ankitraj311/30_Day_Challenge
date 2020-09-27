@@ -4,12 +4,6 @@
 #include <stdlib.h>
 
 void OddEven(char*);
-
-
-
-
-
-
 int main() 
 {
     int i,T;
